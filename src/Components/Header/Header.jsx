@@ -1,8 +1,11 @@
 import React from 'react'
 import classes from './Header.module.css'
-// import { SlLocationPin } from "react-icons/sl";
-// import { BsSearch } from "react-icons/bs";
-// import { BiCart } from "react-icons/bi";
+import { SlLocationPin } from "react-icons/sl";
+import { BsSearch } from "react-icons/bs";
+import { BiCart } from "react-icons/bi";
+import LowerHeader from './LowerHeader';
+
+
 
 
 
@@ -12,6 +15,8 @@ const Header = () => {
     <>
 
      <section>
+
+        
         <div className={classes.header_container}>
             {/* logo section */}
         <div className={classes.logo_container}>
@@ -21,7 +26,7 @@ const Header = () => {
 
             <div className={classes.delivery}>
                 <span>
-                {/* <S1LocationPin /> */}
+                <SlLocationPin size={24} color="#1a1a1a" />
                 </span>
                 <div>
                     <p>Deliver to</p>
@@ -37,7 +42,7 @@ const Header = () => {
                     <option value="">All</option>
                     </select>
                     <input type="text" />
-                    {/* <BsSearch size={25} /> */}
+                    <BsSearch size={24} color="#1a1a1a" />
             </div>
 
 
@@ -59,12 +64,12 @@ const Header = () => {
                 </a>
 
                 <a href=""  className={classes}>
-                    <p>Returns</p>
+                    <p>returns</p>
                     <span>& Orders</span>
                 </a>
 
                 <a href="">
-                    {/* <BiCart size={35} /> */}
+                    <BiCart size={30} color="orange" />         
                     <span>0</span>
                 </a>
           </div>
@@ -73,6 +78,7 @@ const Header = () => {
 
     
      </section>
+     <LowerHeader />
     </>
   )
 }
