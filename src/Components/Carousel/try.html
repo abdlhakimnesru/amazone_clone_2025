@@ -13,3 +13,26 @@ function carouselEffect ()  {
 }
 
 export default carouselEffect
+
+
+
+
+
+<div className={classes.card_container}>
+      <Link to={`/products/${id}`}>
+        <img src={image} alt={title} className={classes.img_container} />
+
+        <div>
+          <h3>{title}</h3>
+          
+          {/* Rating */}
+          <div className={classes.rating}>
+            <small>Rating: {rating.rate} ({rating.count} reviews)</small>
+          </div>
+
+          {/* Price */}
+          <div>${price}</div>
+
+          <button className={classes.button}>Add to cart</button>
+        </div>
+      </Link>

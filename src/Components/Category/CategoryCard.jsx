@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from "./Category.module.css"
 
-const CategoryCard = ({ data }) => {
+const CategoryCard = ({data}) => {
   return (
     <div className={classes.category}>
       <a href="">
