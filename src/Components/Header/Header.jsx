@@ -4,6 +4,8 @@ import { SlLocationPin } from "react-icons/sl";
 import { BsSearch } from "react-icons/bs";
 import { BiCart } from "react-icons/bi";
 import LowerHeader from './LowerHeader';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -20,9 +22,10 @@ const Header = () => {
         <div className={classes.header_container}>
             {/* logo section */}
         <div className={classes.logo_container}>
-            <a href="#">
+            <Link to="/">
                 <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-                alt="amazon logo"/> </a>
+                alt="amazon logo"/>
+                 </Link>
 
             <div className={classes.delivery}>
                 <span>
@@ -48,7 +51,7 @@ const Header = () => {
 
                 {/* other section */}
             <div className={classes.order_container}>
-                <a href="" className={classes.language}>
+                <Link to="" className={classes.language}>
                     <img
                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png"
                        alt="US Flag"
@@ -56,22 +59,22 @@ const Header = () => {
                     <select name="" id="">
                         <option value="">EN</option>
                     </select>
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to="/auth">
                     <p>Sign In</p>
                     <span>Account & Lists</span>
-                </a>
+                </Link>
 
-                <a href=""  className={classes}>
+                <Link to="/Orders"  className={classes}>
                     <p>returns</p>
                     <span>& Orders</span>
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to="/cart">
                     <BiCart size={30} color="orange" />         
                     <span>0</span>
-                </a>
+                </Link>
           </div>
         </div>
         
