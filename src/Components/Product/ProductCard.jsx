@@ -1,17 +1,20 @@
 import React from 'react';
 import Rating from '@mui/material/Rating';
 import CurrencyFormat from '../CurrencyFormat/CurrencyFormat';
-import classes from './Product.module.css'
+import classes from './Product.module.css';
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+  if (!product) return null; // ✅ prevents destructuring error
+
   const { image, title, id, rating, price } = product;
 
   return (
-
-          
     <div className={classes.card_container}>
       {/* Image */}
-      <img src={image} alt={title} />
+      <Link to={`/products/${id}`}>
+        <img src={image} alt=""  className={classes.img_container}/>
+      </Link>
 
       {/* Product Info */}
       <div>

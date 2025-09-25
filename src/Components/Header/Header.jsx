@@ -6,22 +6,14 @@ import { BiCart } from "react-icons/bi";
 import LowerHeader from './LowerHeader';
 import { Link } from 'react-router-dom';
 
-
-
-
-
-
 const Header = () => {
   return (
-
     <>
-
-     <section>
-
-        
+     <section>      
         <div className={classes.header_container}>
             {/* logo section */}
         <div className={classes.logo_container}>
+
             <Link to="/">
                 <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="amazon logo"/>
@@ -36,8 +28,7 @@ const Header = () => {
                      <span>Ethiopia</span>
                 </div>
            </div>
-          </div>
-            
+          </div>       
                       
                   {/* search section */}
             <div className={classes.search}>
@@ -51,6 +42,7 @@ const Header = () => {
 
                 {/* other section */}
             <div className={classes.order_container}>
+                
                 <Link to="" className={classes.language}>
                     <img
                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png"
